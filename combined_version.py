@@ -1,5 +1,3 @@
-
-            
 class Bank:
     def __init__(self):
         self.ifsc_code = 111
@@ -62,6 +60,7 @@ class Customer:
         
 class Run:
     def __init__(self):
+        my_dict = {"customerid": , "account" :};
         while (1) :
             print("-----Please select following options: ------\n")
             customer_status = int(input("1) Create Customer \n 2) Existing Customer \n"))
@@ -79,9 +78,14 @@ class Run:
                 
                 # create object for bank
                 self.account = Savingsaccount(accountid, customerid, custname, address, contact)
+                
+                ## map customer id to account
+               # my_dict.append(customerid, self.account)
                 self.function()
             else:
                 print("Exisitng Customer:")
+                customerid = int(input("Please enter customer id: "))
+                # self.account = my_dict.get(cutomerid) # fetech dictionary customer id
                 self.function()
                 
     def function(self,):
