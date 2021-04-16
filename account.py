@@ -24,15 +24,13 @@ class Account(Bank):
             self.balance = self.balance - amount
             print("Amount withdrawn successfully")
         else:
-            print("Insufficient Balance to withdraw")
+            print("Insufficient Balance to withdraw. Minimum Balance should be 500.")
 
     def getbalance(self):
         print("Your Account Balance is " + str(self.balance))
         return self.balance
 
     def getaccountinfo(self):
-        return 'Customer ID - ' + str(self.customer.customerid) + '\n' \
-               'Customer Name - ' + self.customer.custname + '\n' \
-               + 'Bank Account ID - ' + str(self.accountID) + '\n' \
-               'Bank Name - ' + self.bankname + '\n' \
-               'Bank balance - ' + str(self.balance)
+        print('Customer ID - ' + str(self.customer.customerid) + '\n Customer Name - '
+              + self.customer.custname + '\n Bank Account ID - ' + str(self.accountID) + '\n Bank Name - '
+              + self.bankname + '\n Bank balance - ' + str(self.balance))
